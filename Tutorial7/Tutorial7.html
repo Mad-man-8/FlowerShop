@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop - Order your flowers online</title>
+</head>
+
+<body>
+    <div id="outmostDiv" >
+    <h1>Flower Shop</h1>
+
+    
+    <div id="flowerIcons">
+        <div class="tile">
+            <img src="pink.jpeg" alt="">
+            <div class="overlay">
+                <h3>Pink Boquet</h3> 
+                <p>$24</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="white.jpeg" alt="">
+            <div class="overlay">
+                <h3>white Boquet</h3> 
+                <p>$20</p>
+            </div>
+        </div>
+
+        <div class="tile">
+            <img src="red.jpeg" alt="">
+            <div class="overlay">
+                <h3>red Boquet</h3> 
+                <p>$25</p>
+            </div>
+        </div>
+        
+        <div class="tile">
+            <img src="pink-gift.jpeg" alt="">
+            <div class="overlay">
+                <h3>pink Boquet with Champagne</h3> 
+                <p>$36</p>
+            </div>
+        </div>
+        <div class="tile">
+            <img src="white-gift.jpeg" alt="">
+            <div class="overlay">
+                <h3>white Boquet with Champagne</h3> 
+                <p>$32</p>
+            </div>
+        </div>
+        <div class="tile">
+            <img src="red-gift.jpeg" alt="">
+            <div class="overlay">
+                <h3>red Boquet with Champagne</h3> 
+                <p>$37</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <form action="" id="formForSelectFlower"><br>
+        <label for="">Boquet color</label><br><br>
+        <input  type="radio" name="color" value="white">White <br>
+        <br>
+        <input  type="radio" name="color" value="red">Red <br>
+        <br>
+        <input  type="radio" name="color" value="pink" >Pink <br>
+        <br><br>
+
+        <label for="">Boquet options</label>
+        <select id="flowerOptions" onchange="optionChanged()">
+            <option value="unselected">Select an option</option>
+            <option value="nothing">Nothing additional</option>
+            <option value="extraFlowers">with 50% extra flowers</option>     
+            <option value="champagne">with Champagne</option>
+        </select>
+        <br><br>
+<br>
+<button type="reset" onclick="clearOrder()" style="background-color: rgb(166, 227, 187);">Clear your order</button>
+<button  type="button" onclick="addToCart()" style="background-color: rgb(145, 220, 227);">Place your order</button>
+
+
+    </form>
+    <div id="basket">
+        <h2>Your order</h2>
+        <div style="background-color: beige;">
+        <ul id="basketItems"></ul>
+        <button type="button" onclick="clearCart()">Clear cart</button>
+        <button id="checkoutButton" onclick="showForm()">Checkout</button>
+        </div>
+    </div>
+    <div id="paymentDetails">
+        <button id="close" onclick="closeDetailForm()"> X </button><br><br>
+    <form action="" id="formInfo">
+        <fieldset>
+            <legend><u>Personal Details</u></legend><br>
+            <label for="buyerName">Your name: </label>
+            <input type="text" name="name" id="" required placeholder="Name"><br><br>
+            <label for="buyerSurname" >Surname: </label>
+            <input type="text" placeholder="Surname" ><br><br>
+            <label for="phone">Phone number: </label>
+            <input type="tel" name="phoneNum" id="" required placeholder="Phone Number"><br><br>
+            <label for="email" >Email address: </label>
+            <input type="email" name="email" id="" required placeholder="Email" ><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><u>Shipping Information</u></legend><br>
+            <label for="address">Shipping address: </label>
+            <input type="text" name="address" id="" required placeholder="Address"><br><br>
+            <label for="postalCode" >Postal/Zip code: </label>
+            <input type="text"   required placeholder="Postal/Zip"><br><br>
+            <label for="country">Country: </label>
+            <input type="text" name="country" required placeholder="Country"><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><u>Payment Information</u></legend><br>
+            <label for="cardNum">Card number: </label>
+            <input type="text" required placeholder="xxxx xxxx xxxx xxxx"><br><br>
+            <label for="HolderName">Card holder name: </label>
+            <input type="text" name="holderName" required placeholder="holder name"><br><br>
+            <label for="expDate">Expiry date: </label>
+            <input type="text" name="exp" required placeholder="MM/YY"><br><br>
+            <label for="CVV">CVV: </label>
+            <input type="text" name="cvv" required placeholder="3-digit number at the back of your card"><br>
+        </fieldset>
+        <button type="reset" class="formButtons">Clear</button>
+        <button type="submit" class="formButtons">Proceed</button><br><br>
+    </form>
+    </div>
+</body>
+<link rel="stylesheet" href="Tutorial7.css">
+
+<script src="Tutorial7.js">
+
+</script>
+</html>
